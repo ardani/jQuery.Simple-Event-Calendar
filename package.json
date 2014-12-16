@@ -1,6 +1,6 @@
 {
-    "name": "simpleflatcalendar",
-    "version": "1.0.1",
+    "name": "simplecalendar",
+    "version": "0.0.1",
     "engines": {
         "node": ">= 0.8.0"
     },
