@@ -25,8 +25,9 @@ simplecalendar make it easier for you to create an calendar. Check out the demo!
 
 UPDATES:
 ================
-*Auto add '.event' class to all days that has an event 
+* Auto add '.event' class to all days that has an event 
 
 TODO:
 ================
-*List days automatically based on month
+* List days automatically based on month
+* Responsive CSS
