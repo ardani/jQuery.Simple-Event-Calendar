@@ -2,7 +2,6 @@ var calendar = {
 
     init: function() {
 
-
         /**
          * Get current date
          */
@@ -32,7 +31,7 @@ var calendar = {
         $('tbody td').on('click', function(e) {
             if ($(this).hasClass('event')) {
                 $('tbody td').removeClass('active');
-                $(this).toggleClass('active');
+                $(this).addClass('active');
             } else {
                 $('tbody td').removeClass('active');
             };
@@ -49,7 +48,7 @@ var calendar = {
 
         /**
          * Get current day on click in calendar
-         * and find day-event to show
+         * and find day-event to display
          */
         $('tbody td').on('click', function(e) {
             $('.day-event').slideUp('fast');
