@@ -14,3 +14,7 @@ simplecalendar make it easier for you to create an calendar. Check out the demo!
 ```
 
 ![alt tag](http://oi59.tinypic.com/2vkivxs.jpg)
+
+TODO:
+================
+*List days automatically based on month

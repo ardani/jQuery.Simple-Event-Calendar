@@ -78,16 +78,6 @@ table {
     width: 64px;
 }
 
-.calendar .prev-month,
-.calendar .next-month {
-    color: #cbd1d2;
-}
-
-.calendar .prev-month:hover,
-.calendar .next-month:hover {
-    border: 2px solid #cbd1d2;
-}
-
 .current-day {
     background: #c0392b;
     color: #f9f9f9;

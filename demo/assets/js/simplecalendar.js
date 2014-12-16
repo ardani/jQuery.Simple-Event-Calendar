@@ -9,7 +9,6 @@ var calendar = {
         var d = new Date();
         var strDate = d.getFullYear() + "/" + (d.getMonth() + 1) + "/" + d.getDate();
 
-
         /**
          * Get current month and set as '.current-month' in title
          */
@@ -45,8 +44,9 @@ var calendar = {
          */
         $('tbody td').on('click', function(e) {
             $('.day-event').slideUp('fast');
+            var monthEvent = $(this).attr('id');
             var dayEvent = $(this).text();
-            $('.day-event[date-id="' + dayEvent + '"]').slideDown('fast');
+            $('.day-event[date-month="' + monthEvent + '"][date-id="' + dayEvent + '"]').slideDown('fast');
         });
 
         /**
