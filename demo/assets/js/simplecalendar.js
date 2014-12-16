@@ -39,14 +39,23 @@ var calendar = {
         });
 
         /**
+         * Add '.event' class to all days that has an event
+         */
+        $('.day-event').each(function(i) {
+            var eventMonth = $(this).attr('date-month');
+            var eventDay = $(this).attr('date-day');
+            $('tbody tr td[date-month="' + eventMonth + '"][date-day="' + eventDay + '"]').addClass('event');
+        });
+
+        /**
          * Get current day on click in calendar
          * and find day-event to show
          */
         $('tbody td').on('click', function(e) {
             $('.day-event').slideUp('fast');
-            var monthEvent = $(this).attr('id');
+            var monthEvent = $(this).attr('date-month');
             var dayEvent = $(this).text();
-            $('.day-event[date-month="' + monthEvent + '"][date-id="' + dayEvent + '"]').slideDown('fast');
+            $('.day-event[date-month="' + monthEvent + '"][date-day="' + dayEvent + '"]').slideDown('fast');
         });
 
         /**

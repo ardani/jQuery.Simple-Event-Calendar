@@ -11,9 +11,21 @@ simplecalendar make it easier for you to create an calendar. Check out the demo!
 <script src="simplecalendar.js"></script>
 <!-- and you'll need to include style.css -->
 <script src="style.css"></script>
+<!-- and all you'll need to do is add some divs for event-->
+<div class="day-event" date-month="12" date-day="16">
+<a href="#" class="close fontawesome-remove"></a>
+<h2 class="title">Lorem ipsum 3</h2>
+<span class="date">2014-12-16</span>
+<p>Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok.</p>
+<button class="read-more">Read more</button>
+</div>
 ```
 
 ![alt tag](http://oi59.tinypic.com/2vkivxs.jpg)
+
+UPDATES:
+================
+*Auto add '.event' class to all days that has an event 
 
 TODO:
 ================
