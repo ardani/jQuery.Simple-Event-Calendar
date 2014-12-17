@@ -12,10 +12,13 @@ bower install simpleeventcalendar
 ```html
 <!-- You'll need jquery -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 <!-- and you'll need to include equalheight -->
 <script src="simplecalendar.js"></script>
+
 <!-- and you'll need to include style.css -->
 <script src="style.css"></script>
+
 <!-- and all you'll need to do is add some divs for event-->
 <div class="day-event" date-month="12" date-day="16">
 <a href="#" class="close fontawesome-remove"></a>
