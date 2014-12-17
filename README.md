@@ -35,8 +35,10 @@ UPDATES:
 ================
 * Personal list with print function
 * Auto add '.event' class to all days that has an event 
+* Uncheck calender '.day-event' checkbox when removing event from personal list
 
 TODO:
 ================
 * List days automatically based on month
 * Datepicker
+

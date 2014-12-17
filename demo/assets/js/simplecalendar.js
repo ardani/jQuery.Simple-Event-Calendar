@@ -98,6 +98,8 @@ var calendar = {
                     $('.day[date-month="' + eventMonth + '"][date-day="' + eventDay + '"]').slideUp('slow');
                     setTimeout(function() {
                         $('.day[date-month="' + eventMonth + '"][date-day="' + eventDay + '"]').remove();
+                        $('.day-event[date-month="' + eventMonth + '"][date-day="' + eventDay + '"]').find('.save').attr('checked', false);
+                        $('.day-event[date-month="' + eventMonth + '"][date-day="' + eventDay + '"]').find('span').text('Save to personal list');
                     }, 1500);
                 }
             });
