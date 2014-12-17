@@ -64,6 +64,52 @@ var calendar = {
             $(this).parent().slideUp('fast');
         });
 
+        /**
+         * Save & Remove to/from personal list
+         */
+        $('.save').click(function() {
+            if (this.checked) {
+                $(this).next().text('Remove from personal list');
+                var eventHtml = $(this).closest('.day-event').html();
+                var eventMonth = $(this).closest('.day-event').attr('date-month');
+                var eventDay = $(this).closest('.day-event').attr('date-day');
+                $('.person-list').append('<div class="day" date-month="' + eventMonth + '" date-day="' + eventDay + '">' + eventHtml + '</div>');
+                $('.day').find('.close').remove();
+                $('.day').find('.save').removeClass('save').addClass('remove');
+                $('.day').find('.remove').next().addClass('hidden-print');
+                remove();
+            } else {
+                $(this).next().text('Save to personal list');
+                var eventMonth = $(this).closest('.day-event').attr('date-month');
+                var eventDay = $(this).closest('.day-event').attr('date-day');
+                $('.day[date-month="' + eventMonth + '"][date-day="' + eventDay + '"]').slideUp('slow');
+                setTimeout(function() {
+                    $('.day[date-month="' + eventMonth + '"][date-day="' + eventDay + '"]').remove();
+                }, 1500);
+            }
+        });
+
+        function remove() {
+            $('.remove').click(function() {
+                if (this.checked) {
+                    $(this).next().text('Remove from personal list');
+                    var eventMonth = $(this).closest('.day').attr('date-month');
+                    var eventDay = $(this).closest('.day').attr('date-day');
+                    $('.day[date-month="' + eventMonth + '"][date-day="' + eventDay + '"]').slideUp('slow');
+                    setTimeout(function() {
+                        $('.day[date-month="' + eventMonth + '"][date-day="' + eventDay + '"]').remove();
+                    }, 1500);
+                }
+            });
+        }
+
+        /**
+         * Print button
+         */
+        $('.print-btn').click(function() {
+            window.print();
+        });
+
     },
 };
 

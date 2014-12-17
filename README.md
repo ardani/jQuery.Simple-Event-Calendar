@@ -28,11 +28,13 @@ bower install simpleeventcalendar
 
 ![alt tag](http://oi59.tinypic.com/2vkivxs.jpg)
 
+![alt tag](http://oi62.tinypic.com/dmbq86.jpg)
+
 UPDATES:
 ================
+* Personal list with print function
 * Auto add '.event' class to all days that has an event 
 
 TODO:
 ================
 * List days automatically based on month
-* Responsive CSS
