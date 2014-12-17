@@ -1,7 +1,7 @@
-simpleflatcalendar
+jQuery.Simple-Event-Calendar
 ================
 
-simplecalendar make it easier for you to create an calendar. Check out the demo!
+jQuery.Simple-Event-Calendar make it easier for you to create an calendar. Check out the demo!
 
 ###Install
 ```html
