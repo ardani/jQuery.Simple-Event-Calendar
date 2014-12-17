@@ -73,11 +73,13 @@ var calendar = {
                 var eventHtml = $(this).closest('.day-event').html();
                 var eventMonth = $(this).closest('.day-event').attr('date-month');
                 var eventDay = $(this).closest('.day-event').attr('date-day');
-                $('.person-list').append('<div class="day" date-month="' + eventMonth + '" date-day="' + eventDay + '">' + eventHtml + '</div>');
+                $('.person-list').append('<div class="day" date-month="' + eventMonth + '" date-day="' + eventDay + '" style="display:none;">' + eventHtml + '</div>');
+                $('.day[date-month="' + eventMonth + '"][date-day="' + eventDay + '"]').slideDown('fast');
                 $('.day').find('.close').remove();
                 $('.day').find('.save').removeClass('save').addClass('remove');
                 $('.day').find('.remove').next().addClass('hidden-print');
                 remove();
+                sortlist();
             } else {
                 $(this).next().text('Save to personal list');
                 var eventMonth = $(this).closest('.day-event').attr('date-month');
@@ -103,6 +105,17 @@ var calendar = {
                     }, 1500);
                 }
             });
+        }
+
+        /**
+         * Sort personal list
+         */
+        function sortlist() {
+            var personList = $('.person-list');
+
+            personList.find('.day').sort(function(a, b) {
+                return +a.getAttribute('date-day') - +b.getAttribute('date-day');
+            }).appendTo(personList);
         }
 
         /**

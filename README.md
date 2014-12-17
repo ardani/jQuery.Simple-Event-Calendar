@@ -38,9 +38,9 @@ bower install simpleeventcalendar
 * Personal list with print function
 * Auto add '.event' class to all days that has an event 
 * Uncheck calender '.day-event' checkbox when removing event from personal list
+* Sort personal list based on date
 
 ###Todo
 * List days automatically based on month
-* Sort personal list based on date
 * Datepicker
 
