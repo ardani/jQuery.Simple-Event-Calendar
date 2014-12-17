@@ -3,6 +3,11 @@ simpleflatcalendar
 
 simplecalendar make it easier for you to create an calendar. Check out the demo!
 
+###Install
+```html
+bower install simpleeventcalendar
+```
+
 ###Setup
 ```html
 <!-- You'll need jquery -->
