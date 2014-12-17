@@ -26,8 +26,9 @@ bower install simpleeventcalendar
 </div>
 ```
 
+###Basic
 ![alt tag](http://oi59.tinypic.com/2vkivxs.jpg)
-
+###Personal list
 ![alt tag](http://oi62.tinypic.com/dmbq86.jpg)
 
 UPDATES:
@@ -38,3 +39,4 @@ UPDATES:
 TODO:
 ================
 * List days automatically based on month
+* Datepicker
