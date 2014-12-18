@@ -20,7 +20,7 @@ bower install simpleeventcalendar
 <script src="style.css"></script>
 
 <!-- and all you'll need to do is add some divs for event-->
-<div class="day-event" date-month="12" date-day="16">
+<div class="day-event" date-month="12" date-day="16" data-number="1">
 <a href="#" class="close fontawesome-remove"></a>
 <h2 class="title">Lorem ipsum 3</h2>
 <span class="date">2014-12-16</span>
@@ -39,6 +39,7 @@ bower install simpleeventcalendar
 * Auto add '.event' class to all days that has an event 
 * Uncheck calender '.day-event' checkbox when removing event from personal list
 * Sort personal list based on date
+* Problem when there was more then one event on same day data-number="1"
 
 ###Todo
 * List days automatically based on month

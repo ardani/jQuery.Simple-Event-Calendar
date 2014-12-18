@@ -73,7 +73,8 @@ var calendar = {
                 var eventHtml = $(this).closest('.day-event').html();
                 var eventMonth = $(this).closest('.day-event').attr('date-month');
                 var eventDay = $(this).closest('.day-event').attr('date-day');
-                $('.person-list').append('<div class="day" date-month="' + eventMonth + '" date-day="' + eventDay + '" style="display:none;">' + eventHtml + '</div>');
+                var eventNumber = $(this).closest('.day-event').attr('data-number');
+                $('.person-list').append('<div class="day" date-month="' + eventMonth + '" date-day="' + eventDay + '" data-number="' + eventNumber + '" style="display:none;">' + eventHtml + '</div>');
                 $('.day[date-month="' + eventMonth + '"][date-day="' + eventDay + '"]').slideDown('fast');
                 $('.day').find('.close').remove();
                 $('.day').find('.save').removeClass('save').addClass('remove');
@@ -84,9 +85,10 @@ var calendar = {
                 $(this).next().text('Save to personal list');
                 var eventMonth = $(this).closest('.day-event').attr('date-month');
                 var eventDay = $(this).closest('.day-event').attr('date-day');
-                $('.day[date-month="' + eventMonth + '"][date-day="' + eventDay + '"]').slideUp('slow');
+                var eventNumber = $(this).closest('.day-event').attr('data-number');
+                $('.day[date-month="' + eventMonth + '"][date-day="' + eventDay + '"][data-number="' + eventNumber + '"]').slideUp('slow');
                 setTimeout(function() {
-                    $('.day[date-month="' + eventMonth + '"][date-day="' + eventDay + '"]').remove();
+                    $('.day[date-month="' + eventMonth + '"][date-day="' + eventDay + '"][data-number="' + eventNumber + '"]').remove();
                 }, 1500);
             }
         });
@@ -97,11 +99,12 @@ var calendar = {
                     $(this).next().text('Remove from personal list');
                     var eventMonth = $(this).closest('.day').attr('date-month');
                     var eventDay = $(this).closest('.day').attr('date-day');
-                    $('.day[date-month="' + eventMonth + '"][date-day="' + eventDay + '"]').slideUp('slow');
-                    $('.day-event[date-month="' + eventMonth + '"][date-day="' + eventDay + '"]').find('.save').attr('checked', false);
-                    $('.day-event[date-month="' + eventMonth + '"][date-day="' + eventDay + '"]').find('span').text('Save to personal list');
+                    var eventNumber = $(this).closest('.day').attr('data-number');
+                    $('.day[date-month="' + eventMonth + '"][date-day="' + eventDay + '"][data-number="' + eventNumber + '"]').slideUp('slow');
+                    $('.day-event[date-month="' + eventMonth + '"][date-day="' + eventDay + '"][data-number="' + eventNumber + '"]').find('.save').attr('checked', false);
+                    $('.day-event[date-month="' + eventMonth + '"][date-day="' + eventDay + '"][data-number="' + eventNumber + '"]').find('span').text('Save to personal list');
                     setTimeout(function() {
-                        $('.day[date-month="' + eventMonth + '"][date-day="' + eventDay + '"]').remove();
+                        $('.day[date-month="' + eventMonth + '"][date-day="' + eventDay + '"][data-number="' + eventNumber + '"]').remove();
                     }, 1500);
                 }
             });
